@@ -8,8 +8,8 @@ const testimonials = [
         id: 1,
         quote:
             "J\'amène toute ma famille à Centre D'expertise Biomedicale Maombi depuis trois ans. Les pédiatres sont patients et minutieux — mes enfants attendent maintenant les consultations avec impatience.",
-        name: 'Luc bakamu',
-        role: 'Mère de trois enfants, Paris',
+        name: 'Lucy bakamu',
+        role: 'Mère de trois enfants, Goma',
         initials: 'LB',
         color: '#0D9488',
     },
