@@ -1,13 +1,14 @@
 'use client';
 
 import React, { useState, useRef, useEffect } from 'react';
-import { CalendarDaysIcon, PhoneIcon, MapPinIcon, ClockIcon } from '@heroicons/react/24/outline';
+import { CalendarDaysIcon, PhoneIcon, MapPinIcon, ClockIcon ,EnvelopeIcon } from '@heroicons/react/24/outline';
 import { CheckCircleIcon } from '@heroicons/react/24/solid';
 
 const contactInfo = [
-    { icon: PhoneIcon, label: 'Appelez-nous', value: '+243 829 267 467' },
-    { icon: MapPinIcon, label: 'Trouvez-nous', value: 'DRCongo Goma, Q. Ndosho,N. 108 ' },
-    { icon: ClockIcon, label: 'Horaires', value: 'Dim–Ven 6h–22h, Sam 14–22h' },
+    { icon: PhoneIcon, label: 'Appelez-nous', value: '+243 834 826 955, +234 991 359 198' },
+    { icon: EnvelopeIcon, label: 'Addresse Email', value: 'assistance@cebm.com' },
+    { icon: MapPinIcon, label: 'Trouvez-nous', value: 'Av. Bukama Nord, Q. Kyeshero, C. Goma, Nord-Kivu, RDC.' },
+    { icon: ClockIcon, label: 'Horaires', value: 'Dim-Ven : 8h – 20h, Sam 17h-20h' },
 ];
 
 export default function AppointmentCTA() {

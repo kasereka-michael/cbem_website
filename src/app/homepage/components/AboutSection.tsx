@@ -14,7 +14,7 @@ const stats = [
 const pillars = [
     {
         title: 'Médecine Fondée sur les Preuves',
-        body: 'Chaque diagnostic et plan de traitement suit les recommandations cliniques actuelles — sans approximation, sans examens inutiles.'
+        body: 'Chaque diagnostic et plan de traitement suit les recommandations cliniques actuelles sans approximation, sans examens inutiles.'
     },
     {
         title: 'Soins Coordonnés',
@@ -73,10 +73,10 @@ export default function AboutSection() {
                         {/* Rotated image */}
                         <div className="relative rounded-3xl overflow-hidden shadow-2xl transform -rotate-2 group-hover:rotate-0 transition-all duration-700 ease-out">
                             <AppImage
-                                src="https://img.rocket.new/generatedImages/rocket_gen_img_1dfa89059-1767197235564.png"
+                                src='/assets/images/consultation maombi.webp'
                                 alt="Équipe médicale de médecins dans un intérieur de clinique lumineux, atmosphère professionnelle chaleureuse, environnement de soins collaboratif"
                                 width={640}
-                                height={480}
+                                height={500}
                                 className="w-full object-cover"
                                 priority={false} />
 
@@ -101,36 +101,47 @@ export default function AboutSection() {
                         </div>
 
                         {/* Staggered second image */}
-                        <div className="hidden md:block absolute -top-6 -right-4 w-36 h-36 rounded-2xl overflow-hidden border-2 border-navy-700 shadow-xl rotate-3">
-                            <AppImage
-                                src='/assets/images/building.jpeg'
-                                alt="Gros plan d'équipement médical dans un cadre clinique lumineux, propre et professionnel"
-                                width={144}
-                                height={144}
-                                className="w-full h-full object-cover" />
+                        {/*<div className="hidden md:block absolute -top-6 -right-4 w-36 h-36 rounded-2xl overflow-hidden border-2 border-navy-700 shadow-xl rotate-3">*/}
+                        {/*    <AppImage*/}
+                        {/*        src='/assets/images/building.jpeg'*/}
+                        {/*        alt="Gros plan d'équipement médical dans un cadre clinique lumineux, propre et professionnel"*/}
+                        {/*        width={144}*/}
+                        {/*        height={144}*/}
+                        {/*        className="w-full h-full object-cover" />*/}
 
+                        {/*</div>*/}
+
+                        <div className="hidden md:block absolute -top-6 -right-4 w-36 h-36 rounded-2xl overflow-hidden border-2 border-navy-700 shadow-xl rotate-3">
+                            <video
+                                src="/assets/videos/maombi%20video.mp4"
+                                autoPlay
+                                loop
+                                muted
+                                playsInline
+                                className="w-full h-full object-cover"
+                            />
                         </div>
+
+
                     </div>
 
                     {/* Content side */}
                     <div ref={contentRef} className="w-full lg:w-1/2 opacity-100 flex flex-col justify-between gap-8">
                         <div>
               <span className="text-primary-500 text-xs font-semibold tracking-widest uppercase block mb-4">
-                Notre Philosophie
+                Notre Vision
               </span>
-                            <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-semibold text-white leading-tight mb-6">
-                                Une médecine qui place
-                                <br />
-                                <em className="text-primary-400 not-italic">le patient au centre.</em>
-                            </h2>
+                            {/*<h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-semibold text-white leading-tight mb-6">*/}
+                            {/*    Une médecine qui place*/}
+                            {/*    <br />*/}
+                            {/*    <em className="text-primary-400 not-italic">le patient au centre.</em>*/}
+                            {/*</h2>*/}
                             <div
                                 className="w-16 h-px mb-6"
                                 style={{ background: 'linear-gradient(90deg, #0D9488, transparent)' }} />
 
                             <p className="text-slate-400 text-base md:text-lg font-light leading-relaxed mb-8">
-                                Depuis 2024, Centre D'expertise Biomedicale Maombi est passé d&apos;un cabinet de deux médecins à un campus médical complet —
-                                sans jamais perdre de vue l&apos;essentiel : écouter les patients,
-                                agir rapidement et traiter chaque personne avec dignité.
+                                Devenir un pôle d'excellence technologique et humaine, offrant des diagnostics ultraprécis pour dépister précocement les pathologies complexes, optimiser les stratégies thérapeutiques et personnaliser les soins du patient, le tout dans un environnement humain et accessible.
                             </p>
                         </div>
 

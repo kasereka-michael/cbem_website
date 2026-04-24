@@ -104,8 +104,8 @@ export default function ServicesSection() {
           </span>
                     <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4">
                         <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-semibold text-white leading-tight max-w-lg">
-                            Des Soins Complets,<br />
-                            <span className="text-primary-400">Une Adresse.</span>
+                            Renforcer la Santé<br />
+                            <span className="text-primary-400">Par le Savoir.</span>
                         </h2>
                         <p className="text-slate-400 font-light max-w-sm leading-relaxed text-sm md:text-base">
                             Quatre domaines d&apos;activité biomédicale réunis sous un même toit, avec une coordination optimale entre les services.

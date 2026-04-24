@@ -5,19 +5,20 @@ import AppImage from '@/components/ui/AppImage';
 import { ArrowRightIcon, CalendarDaysIcon } from '@heroicons/react/24/outline';
 import { CheckBadgeIcon } from '@heroicons/react/24/solid';
 
+
 const heroCards = [
     {
         id: 1,
-        title: 'Soins Primaires',
-        subtitle: 'Médecine Générale & Familiale',
-        image: "https://img.rocket.new/generatedImages/rocket_gen_img_1dfa89059-1767197235564.png",
+        title: 'Consultations médicales',
+        subtitle: 'Médecine générale et spécialités médicales',
+        image: '/assets/images/consultation maombi.webp',
         alt: 'Médecin en blouse blanche dans un couloir de clinique faiblement éclairé, environnement médical aux tons bleu profond, cadre clinique professionnel',
         delay: 'delay-400'
     },
     {
         id: 2,
         title: 'Diagnostics',
-        subtitle: 'Laboratoire & Imagerie Avancés',
+        subtitle: 'LABORATOIRE, ELECTRODIAGNOSTIC & IMAGERIE AVANCÉS',
         image: "https://img.rocket.new/generatedImages/rocket_gen_img_12c122ea1-1772880604662.png",
         alt: 'Équipement de diagnostic médical dans une salle clinique sombre, éclairage ambiant bleu, technologie médicale sophistiquée',
         delay: 'delay-600',
@@ -25,8 +26,8 @@ const heroCards = [
     },
     {
         id: 3,
-        title: 'Soins Spécialisés',
-        subtitle: 'Cardiologie · Ortho · Neuro',
+        title: 'Services Spécialisés',
+        subtitle: 'MÉTROLOGIE ET MAINTENANCE BIOMÉDICALE, CONSULTANCE ET FORMATION, RECHERCHE ET DÉVELOPPEMENT ',
         image: "https://images.unsplash.com/photo-1601579984303-f2aabeda2037",
         alt: 'Spécialistes médicaux en consultation dans un hôpital sombre, éclairage dramatique en clair-obscur, atmosphère clinique',
         delay: 'delay-800'
@@ -78,25 +79,27 @@ export default function HeroSection() {
 
                     <span className="w-2 h-2 rounded-full bg-primary-400 shadow-[0_0_8px_rgba(13,148,136,0.8)]" />
                     <span className="text-xs tracking-widest uppercase text-slate-300 font-medium">
-            Nouveaux patients acceptés · Dim–Sam 7h–22h
+            Nouveaux patients acceptés · Dim-Ven : 8h – 20h, Sam 17h-20h
           </span>
                 </div>
 
                 {/* Headline */}
-                <h1 className="font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-semibold text-white leading-[1.04] tracking-tight mb-6 opacity-0 animate-fade-in delay-200">
+                <h1 className="font-display text-2xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-semibold text-white leading-[1.04] tracking-tight mb-6 opacity-0 animate-fade-in delay-200">
                     Des Soins Bienveillants,
                     <br />
                     <span className="relative inline-block">
             <span
-                className="relative z-10"
+                // className="relative z-10"
+                className="font-display text-2xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-semibold text-white leading-[1.04] tracking-tight mb-6 opacity-0 animate-fade-in delay-200"
                 style={{
-                    background: 'linear-gradient(135deg, #F0FDFA 0%, #5EEAD4 40%, #0D9488 100%)',
-                    WebkitBackgroundClip: 'text',
-                    WebkitTextFillColor: 'transparent',
-                    backgroundClip: 'text'
+                    // background: 'linear-gradient(135deg, #F0FDFA 0%, #5EEAD4 40%, #0D9488 100%)',
+                    // WebkitBackgroundClip: 'text',
+                    // WebkitTextFillColor: 'transparent',
+                    // backgroundClip: 'text',
+                    color: '#F0FDFA'
                 }}>
 
-              L&apos;Excellence CEBM.
+              L&apos;Excellence CENTRE D’EXPÉRTISE BIOMÉDICALE MAOMBI.
             </span>
             <span
                 className="absolute bottom-0 left-0 w-full h-0.5 opacity-40"
@@ -107,8 +110,7 @@ export default function HeroSection() {
 
                 {/* Subheadline */}
                 <p className="text-base sm:text-lg md:text-xl text-slate-400 max-w-2xl mx-auto mb-10 font-light leading-relaxed opacity-0 animate-fade-in delay-400 px-2">
-                    Des consultations le jour même aux orientations vers des spécialistes — Centre D'expertise Biomedicale Maombi réunit des médecins
-                    sous un même toit pour que votre famille n&apos;attende jamais les soins qu&apos;elle mérite.
+                    Le Centre D'expertise Biomédicale Maombi vous offre des consultations médicales jour, un plateau technique diagnostique avancé, ainsi que des services biomédicaux spécialisés sous un même toit, pour que votre famille n'attende jamais les soins qu'elle mérite.
                 </p>
 
                 {/* CTAs */}
@@ -197,7 +199,7 @@ export default function HeroSection() {
                     <div className="hidden sm:block w-px h-4 bg-white/10" />
                     <div className="flex items-center gap-2 text-slate-400 text-sm">
                         <CheckBadgeIcon className="w-5 h-5 text-primary-500" />
-                        <span>La plupart des assurances acceptées</span>
+                        <span>Paiement Électronique Accepté</span>
                     </div>
                 </div>
             </div>
