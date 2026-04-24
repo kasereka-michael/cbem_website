@@ -39,18 +39,20 @@ export default function Footer() {
                     <a href="#" className="text-slate-400 hover:text-white text-sm font-medium transition-colors duration-200">Confidentialité</a>
                     <a href="#" className="text-slate-400 hover:text-white text-sm font-medium transition-colors duration-200">Conditions</a>
                 </div>
-                    <div className="flex gap-4 mt-6">
-                        {socialLinks.map((item, i) => (
-                            <a
-                                key={i}
-                                href={item.href}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="w-10 h-10 rounded-xl glass-card flex items-center justify-center text-primary-400 hover:text-white hover:bg-primary-500/20 transition-all duration-300"
-                            >
-                                {item.icon}
-                            </a>
-                        ))}
+                    <div className="flex justify-center">
+                        <div className="flex gap-4 mt-6">
+                            {socialLinks.map((item, i) => (
+                                <a
+                                    key={i}
+                                    href={item.href}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="w-10 h-10 rounded-xl glass-card flex items-center justify-center text-primary-400 hover:text-white hover:bg-primary-500/20 transition-all duration-300"
+                                >
+                                    {item.icon}
+                                </a>
+                            ))}
+                        </div>
                     </div>
                 </div>
             </div>
