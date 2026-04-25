@@ -1,63 +1,64 @@
 'use client';
 
 import React, { useEffect, useRef } from 'react';
+import { useTranslations } from 'next-intl';
 import AppImage from '@/components/ui/AppImage';
 import Icon from '@/components/ui/AppIcon';
 
-interface ServiceCard {
-    id: number;
-    title: string;
-    description: string;
-    icon: string;
-    colSpan: string;
-    rowSpan?: string;
-    image?: string;
-    imageAlt?: string;
-    accent?: string;
-    dark?: boolean;
-}
-
-const services: ServiceCard[] = [
-    {
-        id: 1,
-        title: 'Consultation médicale et services diagnostiques',
-        description: 'Consultations médicales complètes et services diagnostiques avancés incluant imagerie, analyses de laboratoire et pathologie. Résultats disponibles en quelques heures pour la plupart des examens.',
-        icon: 'BeakerIcon',
-        colSpan: 'md:col-span-2',
-        image: "https://img.rocket.new/generatedImages/rocket_gen_img_122893eee-1768046466635.png",
-        imageAlt: 'Équipe médicale dans un couloir d\'hôpital sombre avec un éclairage ambiant bleu dramatique et des ombres profondes',
-        dark: true
-    },
-    {
-        id: 2,
-        title: 'Métrologie et maintenance biomédicale',
-        description: 'Étalonnage, vérification et maintenance des équipements biomédicaux selon les normes internationales pour garantir la précision et la fiabilité des dispositifs médicaux.',
-        icon: 'BoltIcon',
-        colSpan: 'md:col-span-1',
-        accent: '#0D9488'
-    },
-    {
-        id: 3,
-        title: 'Consultance et formation en domaine biomédical',
-        description: 'Accompagnement expert et programmes de formation spécialisés en ingénierie biomédicale pour les professionnels de santé et les établissements médicaux.',
-        icon: 'UserGroupIcon',
-        colSpan: 'md:col-span-1',
-        accent: '#0F766E'
-    },
-    {
-        id: 4,
-        title: 'Recherche et développement biomédical',
-        description: 'Projets de recherche innovants et développement de solutions biomédicales de pointe pour améliorer les pratiques cliniques et les technologies de santé.',
-        icon: 'SparklesIcon',
-        colSpan: 'md:col-span-2',
-        image: "https://img.rocket.new/generatedImages/rocket_gen_img_18406a950-1772702842018.png",
-        imageAlt: "Chercheur biomédical travaillant dans un laboratoire moderne, atmosphère clinique teal sombre, cadre de recherche professionnel",
-        dark: true
-    }];
-
-
 export default function ServicesSection() {
+    const t = useTranslations('ServicesSection');
     const sectionRef = useRef<HTMLElement>(null);
+
+    interface ServiceCard {
+        id: number;
+        title: string;
+        description: string;
+        icon: string;
+        colSpan: string;
+        rowSpan?: string;
+        image?: string;
+        imageAlt?: string;
+        accent?: string;
+        dark?: boolean;
+    }
+
+    const services: ServiceCard[] = [
+        {
+            id: 1,
+            title: t('items.consultation.title'),
+            description: t('items.consultation.description'),
+            icon: 'BeakerIcon',
+            colSpan: 'md:col-span-2',
+            image: "https://img.rocket.new/generatedImages/rocket_gen_img_122893eee-1768046466635.png",
+            imageAlt: 'Équipe médicale dans un couloir d\'hôpital sombre avec un éclairage ambiant bleu dramatique et des ombres profondes',
+            dark: true
+        },
+        {
+            id: 2,
+            title: t('items.metrologie.title'),
+            description: t('items.metrologie.description'),
+            icon: 'BoltIcon',
+            colSpan: 'md:col-span-1',
+            accent: '#0D9488'
+        },
+        {
+            id: 3,
+            title: t('items.consultance.title'),
+            description: t('items.consultance.description'),
+            icon: 'UserGroupIcon',
+            colSpan: 'md:col-span-1',
+            accent: '#0F766E'
+        },
+        {
+            id: 4,
+            title: t('items.recherche.title'),
+            description: t('items.recherche.description'),
+            icon: 'SparklesIcon',
+            colSpan: 'md:col-span-2',
+            image: "https://img.rocket.new/generatedImages/rocket_gen_img_18406a950-1772702842018.png",
+            imageAlt: "Chercheur biomédical travaillant dans un laboratoire moderne, atmosphère clinique teal sombre, cadre de recherche professionnel",
+            dark: true
+        }];
 
     useEffect(() => {
         const cards = sectionRef.current?.querySelectorAll('.service-card');
@@ -100,15 +101,15 @@ export default function ServicesSection() {
                 {/* Header */}
                 <div className="mb-12 md:mb-14">
           <span className="text-primary-500 text-xs font-semibold tracking-widest uppercase block mb-3">
-            Nos Activités
+            {t('badge')}
           </span>
                     <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4">
                         <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-semibold text-white leading-tight max-w-lg">
-                            Renforcer la Santé<br />
-                            <span className="text-primary-400">Par le Savoir.</span>
+                            {t('headline')}<br />
+                            <span className="text-primary-400">{t('subheadline')}</span>
                         </h2>
                         <p className="text-slate-400 font-light max-w-sm leading-relaxed text-sm md:text-base">
-                            Quatre domaines d&apos;activité biomédicale réunis sous un même toit, avec une coordination optimale entre les services.
+                            {t('description')}
                         </p>
                     </div>
                 </div>
@@ -142,7 +143,7 @@ export default function ServicesSection() {
                       <span className="w-6 h-6 rounded-full bg-primary-500/20 flex items-center justify-center">
                         <Icon name={service.icon as Parameters<typeof Icon>[0]['name']} size={14} className="text-primary-400" />
                       </span>
-                                            <span className="text-xs text-primary-400 font-semibold tracking-widest uppercase">Activité Principale</span>
+                                            <span className="text-xs text-primary-400 font-semibold tracking-widest uppercase">{t('mainActivity')}</span>
                                         </div>
                                         <h3 className="font-display text-xl md:text-2xl font-semibold text-white mb-2">{service.title}</h3>
                                         <p className="text-slate-300 text-sm font-light leading-relaxed">{service.description}</p>
@@ -165,7 +166,7 @@ export default function ServicesSection() {
                                         <p className="text-slate-400 text-sm font-light leading-relaxed">{service.description}</p>
                                     </div>
                                     <div className="mt-4 flex items-center gap-1.5 text-primary-500 text-xs font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                                        <span>En savoir plus</span>
+                                        <span>{t('learnMore')}</span>
                                         <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
                                             <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
                                         </svg>

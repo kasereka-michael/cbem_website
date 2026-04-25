@@ -1,31 +1,25 @@
 'use client';
 
 import React, { useEffect, useRef } from 'react';
+import { useTranslations } from 'next-intl';
 import AppImage from '@/components/ui/AppImage';
-import building from '@/public/images/building.jpeg';
 import { ShieldCheckIcon, ClockIcon, UserGroupIcon } from '@heroicons/react/24/solid';
 
-const stats = [
-    { value: '10k+', label: 'Patients Suivis', icon: UserGroupIcon },
-    { value: '15 ans', label: 'En Activité', icon: ClockIcon },
-    { value: '40+', label: 'Spécialistes', icon: ShieldCheckIcon }];
-
-
-const pillars = [
-    {
-        title: 'Médecine Fondée sur les Preuves',
-        body: 'Chaque diagnostic et plan de traitement suit les recommandations cliniques actuelles sans approximation, sans examens inutiles.'
-    },
-    {
-        title: 'Soins Coordonnés',
-        body: 'Votre médecin traitant coordonne avec les spécialistes, les laboratoires et les pharmacies pour que vous n\'ayez jamais à répéter votre histoire.'
-    }];
-
-
 export default function AboutSection() {
+    const t = useTranslations('AboutSection');
     const sectionRef = useRef<HTMLElement>(null);
     const imageRef = useRef<HTMLDivElement>(null);
     const contentRef = useRef<HTMLDivElement>(null);
+
+    const pillars = [
+        {
+            title: t('pillars.evidence.title'),
+            body: t('pillars.evidence.body')
+        },
+        {
+            title: t('pillars.coordinated.title'),
+            body: t('pillars.coordinated.body')
+        }];
 
     useEffect(() => {
         const observer = new IntersectionObserver(
@@ -73,7 +67,7 @@ export default function AboutSection() {
                         {/* Rotated image */}
                         <div className="relative rounded-3xl overflow-hidden shadow-2xl transform -rotate-2 group-hover:rotate-0 transition-all duration-700 ease-out">
                             <AppImage
-                                src='/assets/images/consultation maombi.webp'
+                                src='/consultation-maombi.webp'
                                 alt="Équipe médicale de médecins dans un intérieur de clinique lumineux, atmosphère professionnelle chaleureuse, environnement de soins collaboratif"
                                 width={640}
                                 height={500}
@@ -94,7 +88,7 @@ export default function AboutSection() {
                                     <ShieldCheckIcon className="w-5 h-5 text-primary-400" />
                                 </div>
                                 <div>
-                                    <p className="font-display font-semibold text-white text-sm">Identification nationale</p>
+                                    <p className="font-display font-semibold text-white text-sm">{t('idTitle')}</p>
                                     <p className="text-slate-400 text-xs mt-0.5 leading-snug">01-Q8601-N80824T RCCM : CD/KNG/RCCM/25-A-06846</p>
                                 </div>
                             </div>
@@ -113,7 +107,7 @@ export default function AboutSection() {
 
                         <div className="hidden md:block absolute -top-6 -right-4 w-36 h-36 rounded-2xl overflow-hidden border-2 border-navy-700 shadow-xl rotate-3">
                             <video
-                                src="/assets/videos/maombi%20video.mp4"
+                                src="/maombi-video.mp4"
                                 autoPlay
                                 loop
                                 muted
@@ -129,7 +123,7 @@ export default function AboutSection() {
                     <div ref={contentRef} className="w-full lg:w-1/2 opacity-100 flex flex-col justify-between gap-8">
                         <div>
               <span className="text-primary-500 text-xs font-semibold tracking-widest uppercase block mb-4">
-                Notre Vision
+                {t('badge')}
               </span>
                             {/*<h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-semibold text-white leading-tight mb-6">*/}
                             {/*    Une médecine qui place*/}
@@ -141,7 +135,7 @@ export default function AboutSection() {
                                 style={{ background: 'linear-gradient(90deg, #0D9488, transparent)' }} />
 
                             <p className="text-slate-400 text-base md:text-lg font-light leading-relaxed mb-8">
-                                Devenir un pôle d'excellence technologique et humaine, offrant des diagnostics ultraprécis pour dépister précocement les pathologies complexes, optimiser les stratégies thérapeutiques et personnaliser les soins du patient, le tout dans un environnement humain et accessible.
+                                {t('description')}
                             </p>
                         </div>
 

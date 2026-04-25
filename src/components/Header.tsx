@@ -1,19 +1,31 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
+import { useTranslations, useLocale } from 'next-intl';
+import { usePathname, useRouter } from '@/i18n/routing';
 import AppLogo from '@/components/ui/AppLogo';
-import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
-
-const navLinks = [
-    { label: 'Services', href: '#services' },
-    { label: 'À propos', href: '#about' },
-    { label: 'Témoignages', href: '#testimonials' },
-    { label: 'Contact', href: '#contact' },
-];
+import { Bars3Icon, XMarkIcon, LanguageIcon } from '@heroicons/react/24/outline';
 
 export default function Header() {
+    const t = useTranslations('Header');
+    const locale = useLocale();
+    const pathname = usePathname();
+    const router = useRouter();
+    
     const [mobileOpen, setMobileOpen] = useState(false);
     const [scrolled, setScrolled] = useState(false);
+
+    const navLinks = [
+        { label: t('services'), href: '#services' },
+        { label: t('about'), href: '#about' },
+        { label: t('testimonials'), href: '#testimonials' },
+        { label: t('contact'), href: '#contact' },
+    ];
+
+    const toggleLocale = () => {
+        const nextLocale = locale === 'en' ? 'fr' : 'en';
+        router.replace(pathname, { locale: nextLocale });
+    };
 
     useEffect(() => {
         const handleScroll = () => setScrolled(window.scrollY > 40);
@@ -65,25 +77,42 @@ export default function Header() {
                     </div>
 
                     {/* Desktop CTA */}
-                    <a
-                        href="#contact"
-                        className="hidden md:flex items-center gap-2 btn-shine bg-primary-600 hover:bg-primary-500 text-white px-5 py-2.5 rounded-full text-sm font-semibold transition-all duration-300 shadow-lg shadow-primary-900/30 shrink-0"
-                    >
-                        Prendre Rendez-vous
-                    </a>
+                    <div className="hidden md:flex items-center gap-4">
+                        <button
+                            onClick={toggleLocale}
+                            className="flex items-center gap-2 text-slate-400 hover:text-white transition-colors duration-300 text-sm font-medium uppercase tracking-wider"
+                        >
+                            <LanguageIcon className="w-4 h-4" />
+                            {locale === 'en' ? 'FR' : 'EN'}
+                        </button>
+                        <a
+                            href="#contact"
+                            className="flex items-center gap-2 btn-shine bg-primary-600 hover:bg-primary-500 text-white px-5 py-2.5 rounded-full text-sm font-semibold transition-all duration-300 shadow-lg shadow-primary-900/30 shrink-0"
+                        >
+                            {t('bookAppointment')}
+                        </a>
+                    </div>
 
                     {/* Mobile Hamburger */}
-                    <button
-                        onClick={() => setMobileOpen(!mobileOpen)}
-                        className="md:hidden text-slate-300 hover:text-white p-2 transition-colors"
-                        aria-label={mobileOpen ? 'Fermer le menu' : 'Ouvrir le menu'}
-                    >
-                        {mobileOpen ? (
-                            <XMarkIcon className="w-6 h-6" />
-                        ) : (
-                            <Bars3Icon className="w-6 h-6" />
-                        )}
-                    </button>
+                    <div className="flex items-center gap-2 md:hidden">
+                        <button
+                            onClick={toggleLocale}
+                            className="text-slate-300 hover:text-white p-2 transition-colors uppercase text-xs font-bold"
+                        >
+                            {locale === 'en' ? 'FR' : 'EN'}
+                        </button>
+                        <button
+                            onClick={() => setMobileOpen(!mobileOpen)}
+                            className="text-slate-300 hover:text-white p-2 transition-colors"
+                            aria-label={mobileOpen ? t('closeMenu') : t('openMenu')}
+                        >
+                            {mobileOpen ? (
+                                <XMarkIcon className="w-6 h-6" />
+                            ) : (
+                                <Bars3Icon className="w-6 h-6" />
+                            )}
+                        </button>
+                    </div>
                 </div>
             </nav>
             {/* Mobile Overlay */}
@@ -109,7 +138,7 @@ export default function Header() {
                         onClick={handleLinkClick}
                         className="mt-8 btn-shine bg-primary-600 text-white px-6 py-4 rounded-2xl text-base font-semibold text-center transition-all duration-300"
                     >
-                        Prendre Rendez-vous
+                        {t('bookAppointment')}
                     </a>
                 </div>
             )}

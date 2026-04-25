@@ -1,0 +1,133 @@
+{
+  "AppointmentCTA": {
+    "contactUs": "Contact Us",
+    "headline": "Your health doesn't wait.",
+    "subheadline": "Book today.",
+    "description": "Same-day appointments available for emergencies. Use the form or call us directly — our care coordinators respond in less than 2 minutes.",
+    "callUs": "Call us",
+    "emailAddress": "Email Address",
+    "findUs": "Find us",
+    "hours": "Hours",
+    "requestAppointment": "Request an Appointment",
+    "fullName": "Full Name",
+    "phone": "Phone Number",
+    "service": "Desired Service",
+    "date": "Preferred Date",
+    "confirmButton": "Confirm Appointment Request",
+    "noPayment": "No payment required. Our team will confirm availability within 30 minutes.",
+    "submittedTitle": "Appointment Requested!",
+    "submittedDesc": "Our care coordinator will call you within 30 minutes to confirm your appointment time.",
+    "anotherAppointment": "Make another appointment",
+    "selectService": "Select a service...",
+    "services": {
+      "consultation": "Medical consultation and diagnostic services",
+      "metrologie": "Metrology and biomedical maintenance",
+      "consultance": "Consultancy and training in the biomedical field",
+      "recherche": "Biomedical research and development"
+    }
+  },
+  "Layout": {
+    "title": "CEBM — Trusted Care for the Whole Family",
+    "description": "CEBM offers primary care, diagnostics, specialized consultations, and preventive health services for patients of all ages in a welcoming clinic."
+  },
+  "Header": {
+    "services": "Services",
+    "about": "About",
+    "testimonials": "Testimonials",
+    "contact": "Contact",
+    "bookAppointment": "Book Appointment",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu"
+  },
+  "HeroSection": {
+    "badge": "New patients accepted · Sun-Fri: 8am – 8pm, Sat 5pm-8pm",
+    "headline": "Caring Care,",
+    "excellence": "Excellence CENTRE D’EXPÉRTISE BIOMÉDICALE MAOMBI.",
+    "description": "The Maombi Biomedical Expertise Center offers you daily medical consultations, an advanced diagnostic technical platform, as well as specialized biomedical services under one roof, so that your family never waits for the care they deserve.",
+    "bookAppointment": "Book an Appointment",
+    "discoverServices": "Discover our Services",
+    "certifiedDoctors": "Certified doctors",
+    "sameDayAppointments": "Same-day appointments available",
+    "electronicPayment": "Electronic Payment Accepted",
+    "cards": {
+      "consultations": {
+        "title": "Medical Consultations",
+        "subtitle": "General medicine and medical specialties"
+      },
+      "diagnostics": {
+        "title": "Diagnostics",
+        "subtitle": "ADVANCED LABORATORY, ELECTRODIAGNOSTIC & IMAGING"
+      },
+      "specialized": {
+        "title": "Specialized Services",
+        "subtitle": "BIOMEDICAL METROLOGY AND MAINTENANCE, CONSULTANCY AND TRAINING, RESEARCH AND DEVELOPMENT"
+      }
+    }
+  },
+  "ServicesSection": {
+    "badge": "Our Activities",
+    "headline": "Strengthening Health",
+    "subheadline": "Through Knowledge.",
+    "description": "Four areas of biomedical activity gathered under one roof, with optimal coordination between services.",
+    "mainActivity": "Main Activity",
+    "learnMore": "Learn more",
+    "items": {
+      "consultation": {
+        "title": "Medical Consultation and Diagnostic Services",
+        "description": "Comprehensive medical consultations and advanced diagnostic services including imaging, laboratory analysis, and pathology. Results available within hours for most exams."
+      },
+      "metrologie": {
+        "title": "Biomedical Metrology and Maintenance",
+        "description": "Calibration, verification, and maintenance of biomedical equipment according to international standards to ensure the accuracy and reliability of medical devices."
+      },
+      "consultance": {
+        "title": "Biomedical Consultancy and Training",
+        "description": "Expert support and specialized training programs in biomedical engineering for healthcare professionals and medical facilities."
+      },
+      "recherche": {
+        "title": "Biomedical Research and Development",
+        "description": "Innovative research projects and development of cutting-edge biomedical solutions to improve clinical practices and health technologies."
+      }
+    }
+  },
+  "AboutSection": {
+    "badge": "Our Vision",
+    "description": "To become a pole of technological and human excellence, offering ultra-precise diagnostics to detect complex pathologies early, optimize therapeutic strategies and personalize patient care, all in a human and accessible environment.",
+    "idTitle": "National Identification",
+    "pillars": {
+      "evidence": {
+        "title": "Evidence-Based Medicine",
+        "body": "Every diagnosis and treatment plan follows current clinical guidelines without guesswork, without unnecessary exams."
+      },
+      "coordinated": {
+        "title": "Coordinated Care",
+        "body": "Your attending physician coordinates with specialists, laboratories, and pharmacies so you never have to repeat your story."
+      }
+    }
+  },
+  "TestimonialsSection": {
+    "badge": "Patient Testimonials",
+    "headline": "Real people, real results.",
+    "items": {
+      "lucy": {
+        "quote": "I have been bringing my whole family to Maombi Biomedical Expertise Center for three years. The pediatricians are patient and thorough — my children now look forward to their consultations.",
+        "role": "Mother of three children, Goma"
+      },
+      "jacques": {
+        "quote": "After my heart attack, the cardiology team coordinated everything seamlessly — from the emergency transfer to my follow-up stress test. I never felt lost in the system.",
+        "role": "Heart patient, 58 years old"
+      },
+      "selengo": {
+        "quote": "Same-day diagnostics saved me weeks of anxiety. Blood results in less than four hours, and my doctor called me personally to explain everything.",
+        "role": "Software engineer"
+      }
+    }
+  },
+  "Footer": {
+    "tagline1": "Taking care of your health",
+    "tagline2": "every step of the way.",
+    "copyright": "© {year} Maombi Biomedical Expertise Center. All rights reserved.",
+    "privacy": "Privacy",
+    "terms": "Terms"
+  }
+}

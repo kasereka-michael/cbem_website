@@ -1,14 +1,19 @@
 import React from 'react';
+import { useTranslations } from 'next-intl';
 import AppLogo from '@/components/ui/AppLogo';
 import { HeartIcon } from '@heroicons/react/24/solid';
-import { FaFacebookF, FaInstagram, FaXTwitter ,FaLinkedinIn } from 'react-icons/fa6';
+import { FaFacebookF, FaInstagram, FaXTwitter ,FaLinkedinIn, FaWhatsapp } from 'react-icons/fa6';
 
 export default function Footer() {
+    const t = useTranslations('Footer');
+    const tNav = useTranslations('Header');
+
     const socialLinks = [
         { icon: <FaFacebookF />, href: 'https://facebook.com/yourpage' },
         { icon: <FaInstagram />, href: 'https://instagram.com/yourpage' },
         { icon: <FaXTwitter />, href: 'https://x.com/yourpage' },
         { icon: <FaLinkedinIn />, href: 'https://linkedin.com/company/yourpage' },
+        { icon: <FaWhatsapp />, href: 'https://wa.me/243991359198?src=qr' },
     ];
     return (
         <footer className="border-t border-white/5 py-12 px-4 sm:px-6">
@@ -22,22 +27,22 @@ export default function Footer() {
             </span>
                     </div>
                     <p className="text-slate-500 text-sm font-medium flex items-center gap-1.5">
-                        Prendre soin de votre santé
+                        {t('tagline1')}
                         <HeartIcon className="w-3.5 h-3.5 text-primary-500" />
-                        à chaque étape.
+                        {t('tagline2')}
                     </p>
-                    <p className="text-slate-600 text-sm">© {new Date()?.getFullYear()} Centre D'expertise Biomedicale Maombi. Tous droits réservés.</p>
+                    <p className="text-slate-600 text-sm">{t('copyright', {year: new Date()?.getFullYear()})}</p>
                 </div>
 
                 {/* Right: Links */}
                 <div>
                 <div className="flex flex-wrap justify-center md:justify-end items-center gap-x-8 gap-y-3">
-                    <a href="#services" className="text-slate-400 hover:text-white text-sm font-medium transition-colors duration-200">Services</a>
-                    <a href="#about" className="text-slate-400 hover:text-white text-sm font-medium transition-colors duration-200">À propos</a>
-                    <a href="#testimonials" className="text-slate-400 hover:text-white text-sm font-medium transition-colors duration-200">Témoignages</a>
-                    <a href="#contact" className="text-slate-400 hover:text-white text-sm font-medium transition-colors duration-200">Contact</a>
-                    <a href="#" className="text-slate-400 hover:text-white text-sm font-medium transition-colors duration-200">Confidentialité</a>
-                    <a href="#" className="text-slate-400 hover:text-white text-sm font-medium transition-colors duration-200">Conditions</a>
+                    <a href="#services" className="text-slate-400 hover:text-white text-sm font-medium transition-colors duration-200">{tNav('services')}</a>
+                    <a href="#about" className="text-slate-400 hover:text-white text-sm font-medium transition-colors duration-200">{tNav('about')}</a>
+                    <a href="#testimonials" className="text-slate-400 hover:text-white text-sm font-medium transition-colors duration-200">{tNav('testimonials')}</a>
+                    <a href="#contact" className="text-slate-400 hover:text-white text-sm font-medium transition-colors duration-200">{tNav('contact')}</a>
+                    <a href="#" className="text-slate-400 hover:text-white text-sm font-medium transition-colors duration-200">{t('privacy')}</a>
+                    <a href="#" className="text-slate-400 hover:text-white text-sm font-medium transition-colors duration-200">{t('terms')}</a>
                 </div>
                     <div className="flex justify-center">
                         <div className="flex gap-4 mt-6">

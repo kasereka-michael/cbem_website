@@ -1,40 +1,39 @@
 'use client';
 
 import React, { useEffect, useRef } from 'react';
+import { useTranslations } from 'next-intl';
 import { StarIcon } from '@heroicons/react/24/solid';
 
-const testimonials = [
-    {
-        id: 1,
-        quote:
-            "J\'amène toute ma famille à Centre D'expertise Biomedicale Maombi depuis trois ans. Les pédiatres sont patients et minutieux — mes enfants attendent maintenant les consultations avec impatience.",
-        name: 'Lucy bakamu',
-        role: 'Mère de trois enfants, Goma',
-        initials: 'LB',
-        color: '#0D9488',
-    },
-    {
-        id: 2,
-        quote:
-            "Après mon accident cardiaque, l'équipe de cardiologie a tout coordonné de manière transparente — du transfert aux urgences jusqu'à mon test d'effort de suivi. Je ne me suis jamais senti perdu dans le système.",
-        name: 'Jacques Magumba',
-        role: 'Patient cardiaque, 58 ans',
-        initials: 'JM',
-        color: '#0F766E',
-    },
-    {
-        id: 3,
-        quote:
-            "Les diagnostics le jour même m'ont épargné des semaines d'anxiété. Résultats sanguins en moins de quatre heures, et mon médecin m'a appelé personnellement pour tout expliquer.",
-        name: 'Selengo Nkina',
-        role: 'Ingénieure logiciel',
-        initials: 'SN',
-        color: '#115E59',
-    },
-];
-
 export default function TestimonialsSection() {
+    const t = useTranslations('TestimonialsSection');
     const cardRefs = useRef<(HTMLDivElement | null)[]>([]);
+
+    const testimonials = [
+        {
+            id: 1,
+            quote: t('items.lucy.quote'),
+            name: 'Lucy bakamu',
+            role: t('items.lucy.role'),
+            initials: 'LB',
+            color: '#0D9488',
+        },
+        {
+            id: 2,
+            quote: t('items.jacques.quote'),
+            name: 'Jacques Magumba',
+            role: t('items.jacques.role'),
+            initials: 'JM',
+            color: '#0F766E',
+        },
+        {
+            id: 3,
+            quote: t('items.selengo.quote'),
+            name: 'Selengo Nkina',
+            role: t('items.selengo.role'),
+            initials: 'SN',
+            color: '#115E59',
+        },
+    ];
 
     useEffect(() => {
         const observer = new IntersectionObserver(
@@ -72,10 +71,10 @@ export default function TestimonialsSection() {
                 {/* Header */}
                 <div className="text-center mb-12 md:mb-14">
           <span className="text-primary-500 text-xs font-semibold tracking-widest uppercase block mb-3">
-            Témoignages Patients
+            {t('badge')}
           </span>
                     <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-semibold text-white">
-                        Des personnes réelles, des résultats concrets.
+                        {t('headline')}
                     </h2>
                 </div>
 

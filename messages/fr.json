@@ -1,0 +1,133 @@
+{
+  "AppointmentCTA": {
+    "contactUs": "Contactez-nous",
+    "headline": "Votre santé n'attend pas.",
+    "subheadline": "Réservez aujourd'hui.",
+    "description": "Rendez-vous le jour même disponibles pour les urgences. Utilisez le formulaire ou appelez-nous directement — nos coordinateurs de soins répondent en moins de 2 minutes.",
+    "callUs": "Appelez-nous",
+    "emailAddress": "Addresse Email",
+    "findUs": "Trouvez-nous",
+    "hours": "Horaires",
+    "requestAppointment": "Demander un Rendez-vous",
+    "fullName": "Nom Complet",
+    "phone": "Numéro de Téléphone",
+    "service": "Service Souhaité",
+    "date": "Date Préférée",
+    "confirmButton": "Confirmer la Demande de Rendez-vous",
+    "noPayment": "Aucun paiement requis. Notre équipe confirmera la disponibilité dans les 30 minutes.",
+    "submittedTitle": "Rendez-vous Demandé !",
+    "submittedDesc": "Notre coordinateur de soins vous appellera dans les 30 minutes pour confirmer votre heure de rendez-vous.",
+    "anotherAppointment": "Prendre un autre rendez-vous",
+    "selectService": "Sélectionner un service…",
+    "services": {
+      "consultation": "Consultation médicale et services diagnostiques",
+      "metrologie": "Métrologie et maintenance biomédicale",
+      "consultance": "Consultance et formation en domaine biomédical",
+      "recherche": "Recherche et développement biomédical"
+    }
+  },
+  "Layout": {
+    "title": "CEBM — Des Soins de Confiance pour Toute la Famille",
+    "description": "CEBM propose des soins primaires, des diagnostics, des consultations spécialisées et des services de santé préventive pour les patients de tous âges dans une clinique accueillante."
+  },
+  "Header": {
+    "services": "Services",
+    "about": "À propos",
+    "testimonials": "Témoignages",
+    "contact": "Contact",
+    "bookAppointment": "Prendre Rendez-vous",
+    "openMenu": "Ouvrir le menu",
+    "closeMenu": "Fermer le menu"
+  },
+  "HeroSection": {
+    "badge": "Nouveaux patients acceptés · Dim-Ven : 8h – 20h, Sam 17h-20h",
+    "headline": "Des Soins Bienveillants,",
+    "excellence": "L'Excellence CENTRE D’EXPÉRTISE BIOMÉDICALE MAOMBI.",
+    "description": "Le Centre D'expertise Biomédicale Maombi vous offre des consultations médicales jour, un plateau technique diagnostique avancé, ainsi que des services biomédicaux spécialisés sous un même toit, pour que votre famille n'attende jamais les soins qu'elle mérite.",
+    "bookAppointment": "Prendre Rendez-vous",
+    "discoverServices": "Découvrir nos Services",
+    "certifiedDoctors": "Médecins certifiés",
+    "sameDayAppointments": "Rendez-vous le jour même disponibles",
+    "electronicPayment": "Paiement Électronique Accepté",
+    "cards": {
+      "consultations": {
+        "title": "Consultations médicales",
+        "subtitle": "Médecine générale et spécialités médicales"
+      },
+      "diagnostics": {
+        "title": "Diagnostics",
+        "subtitle": "LABORATOIRE, ELECTRODIAGNOSTIC & IMAGERIE AVANCÉS"
+      },
+      "specialized": {
+        "title": "Services Spécialisés",
+        "subtitle": "MÉTROLOGIE ET MAINTENANCE BIOMÉDICALE, CONSULTANCE ET FORMATION, RECHERCHE ET DÉVELOPPEMENT"
+      }
+    }
+  },
+  "ServicesSection": {
+    "badge": "Nos Activités",
+    "headline": "Renforcer la Santé",
+    "subheadline": "Par le Savoir.",
+    "description": "Quatre domaines d'activité biomédicale réunis sous un même toit, avec une coordination optimale entre les services.",
+    "mainActivity": "Activité Principale",
+    "learnMore": "En savoir plus",
+    "items": {
+      "consultation": {
+        "title": "Consultation médicale et services diagnostiques",
+        "description": "Consultations médicales complètes et services diagnostiques avancés incluant imagerie, analyses de laboratoire et pathologie. Résultats disponibles en quelques heures pour la plupart des examens."
+      },
+      "metrologie": {
+        "title": "Métrologie et maintenance biomédicale",
+        "description": "Étalonnage, vérification et maintenance des équipements biomédicaux selon les normes internationales pour garantir la précision et la fiabilité des dispositifs médicaux."
+      },
+      "consultance": {
+        "title": "Consultance et formation en domaine biomédical",
+        "description": "Accompagnement expert et programmes de formation spécialisés en ingénierie biomédicale pour les professionnels de santé et les établissements médicaux."
+      },
+      "recherche": {
+        "title": "Recherche et développement biomédical",
+        "description": "Projets de recherche innovants et développement de solutions biomédicales de pointe pour améliorer les pratiques cliniques et les technologies de santé."
+      }
+    }
+  },
+  "AboutSection": {
+    "badge": "Notre Vision",
+    "description": "Devenir un pôle d'excellence technologique et humaine, offrant des diagnostics ultraprécis pour dépister précocement les pathologies complexes, optimiser les stratégies thérapeutiques et personnaliser les soins du patient, le tout dans un environnement humain et accessible.",
+    "idTitle": "Identification nationale",
+    "pillars": {
+      "evidence": {
+        "title": "Médecine Fondée sur les Preuves",
+        "body": "Chaque diagnostic et plan de traitement suit les recommandations cliniques actuelles sans approximation, sans examens inutiles."
+      },
+      "coordinated": {
+        "title": "Soins Coordonnés",
+        "body": "Votre médecin traitant coordonne avec les spécialistes, les laboratoires et les pharmacies pour que vous n'ayez jamais à répéter votre histoire."
+      }
+    }
+  },
+  "TestimonialsSection": {
+    "badge": "Témoignages Patients",
+    "headline": "Des personnes réelles, des résultats concrets.",
+    "items": {
+      "lucy": {
+        "quote": "J'amène toute ma famille à Centre D'expertise Biomedicale Maombi depuis trois ans. Les pédiatres sont patients et minutieux — mes enfants attendent maintenant les consultations avec impatience.",
+        "role": "Mère de trois enfants, Goma"
+      },
+      "jacques": {
+        "quote": "Après mon accident cardiaque, l'équipe de cardiologie a tout coordonné de manière transparente — du transfert aux urgences jusqu'à mon test d'effort de suivi. Je ne me suis jamais senti perdu dans le système.",
+        "role": "Patient cardiaque, 58 ans"
+      },
+      "selengo": {
+        "quote": "Les diagnostics le jour même m'ont épargné des semaines d'anxiété. Résultats sanguins en moins de quatre heures, et mon médecin m'a appelé personnellement pour tout expliquer.",
+        "role": "Ingénieure logiciel"
+      }
+    }
+  },
+  "Footer": {
+    "tagline1": "Prendre soin de votre santé",
+    "tagline2": "à chaque étape.",
+    "copyright": "© {year} Centre D'expertise Biomedicale Maombi. Tous droits réservés.",
+    "privacy": "Confidentialité",
+    "terms": "Conditions"
+  }
+}

@@ -1,41 +1,42 @@
 'use client';
 
 import React, { useEffect, useRef } from 'react';
+import { useTranslations } from 'next-intl';
 import AppImage from '@/components/ui/AppImage';
 import { ArrowRightIcon, CalendarDaysIcon } from '@heroicons/react/24/outline';
 import { CheckBadgeIcon } from '@heroicons/react/24/solid';
-
-
-const heroCards = [
-    {
-        id: 1,
-        title: 'Consultations médicales',
-        subtitle: 'Médecine générale et spécialités médicales',
-        image: '/assets/images/consultation maombi.webp',
-        alt: 'Médecin en blouse blanche dans un couloir de clinique faiblement éclairé, environnement médical aux tons bleu profond, cadre clinique professionnel',
-        delay: 'delay-400'
-    },
-    {
-        id: 2,
-        title: 'Diagnostics',
-        subtitle: 'LABORATOIRE, ELECTRODIAGNOSTIC & IMAGERIE AVANCÉS',
-        image: "https://img.rocket.new/generatedImages/rocket_gen_img_12c122ea1-1772880604662.png",
-        alt: 'Équipement de diagnostic médical dans une salle clinique sombre, éclairage ambiant bleu, technologie médicale sophistiquée',
-        delay: 'delay-600',
-        elevated: true
-    },
-    {
-        id: 3,
-        title: 'Services Spécialisés',
-        subtitle: 'MÉTROLOGIE ET MAINTENANCE BIOMÉDICALE, CONSULTANCE ET FORMATION, RECHERCHE ET DÉVELOPPEMENT ',
-        image: "https://images.unsplash.com/photo-1601579984303-f2aabeda2037",
-        alt: 'Spécialistes médicaux en consultation dans un hôpital sombre, éclairage dramatique en clair-obscur, atmosphère clinique',
-        delay: 'delay-800'
-    }];
-
+const consult = '/consultation-maombi.webp';
 
 export default function HeroSection() {
+    const t = useTranslations('HeroSection');
     const badgeRef = useRef<HTMLDivElement>(null);
+
+    const heroCards = [
+        {
+            id: 1,
+            title: t('cards.consultations.title'),
+            subtitle: t('cards.consultations.subtitle'),
+            image:consult,
+            alt: 'Médecin en blouse blanche dans un couloir de clinique faiblement éclairé, environnement médical aux tons bleu profond, cadre clinique professionnel',
+            delay: 'delay-400'
+        },
+        {
+            id: 2,
+            title: t('cards.diagnostics.title'),
+            subtitle: t('cards.diagnostics.subtitle'),
+            image: "https://img.rocket.new/generatedImages/rocket_gen_img_12c122ea1-1772880604662.png",
+            alt: 'Équipement de diagnostic médical dans une salle clinique sombre, éclairage ambiant bleu, technologie médicale sophistiquée',
+            delay: 'delay-600',
+            elevated: true
+        },
+        {
+            id: 3,
+            title: t('cards.specialized.title'),
+            subtitle: t('cards.specialized.subtitle'),
+            image: "https://images.unsplash.com/photo-1601579984303-f2aabeda2037",
+            alt: 'Spécialistes médicaux en consultation dans un hôpital sombre, éclairage dramatique en clair-obscur, atmosphère clinique',
+            delay: 'delay-800'
+        }];
 
     useEffect(() => {
         const badge = badgeRef?.current;
@@ -79,13 +80,13 @@ export default function HeroSection() {
 
                     <span className="w-2 h-2 rounded-full bg-primary-400 shadow-[0_0_8px_rgba(13,148,136,0.8)]" />
                     <span className="text-xs tracking-widest uppercase text-slate-300 font-medium">
-            Nouveaux patients acceptés · Dim-Ven : 8h – 20h, Sam 17h-20h
+            {t('badge')}
           </span>
                 </div>
 
                 {/* Headline */}
                 <h1 className="font-display text-2xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-semibold text-white leading-[1.04] tracking-tight mb-6 opacity-0 animate-fade-in delay-200">
-                    Des Soins Bienveillants,
+                    {t('headline')}
                     <br />
                     <span className="relative inline-block">
             <span
@@ -99,7 +100,7 @@ export default function HeroSection() {
                     color: '#F0FDFA'
                 }}>
 
-              L&apos;Excellence CENTRE D’EXPÉRTISE BIOMÉDICALE MAOMBI.
+              {t('excellence')}
             </span>
             <span
                 className="absolute bottom-0 left-0 w-full h-0.5 opacity-40"
@@ -110,7 +111,7 @@ export default function HeroSection() {
 
                 {/* Subheadline */}
                 <p className="text-base sm:text-lg md:text-xl text-slate-400 max-w-2xl mx-auto mb-10 font-light leading-relaxed opacity-0 animate-fade-in delay-400 px-2">
-                    Le Centre D'expertise Biomédicale Maombi vous offre des consultations médicales jour, un plateau technique diagnostique avancé, ainsi que des services biomédicaux spécialisés sous un même toit, pour que votre famille n'attende jamais les soins qu'elle mérite.
+                    {t('description')}
                 </p>
 
                 {/* CTAs */}
@@ -120,13 +121,13 @@ export default function HeroSection() {
                         className="btn-shine flex items-center gap-2 bg-primary-600 hover:bg-primary-500 text-white px-7 py-3.5 rounded-full text-sm font-semibold transition-all duration-300 shadow-xl shadow-primary-900/40 w-full sm:w-auto justify-center">
 
                         <CalendarDaysIcon className="w-4 h-4" />
-                        Prendre Rendez-vous
+                        {t('bookAppointment')}
                     </a>
                     <a
                         href="#services"
                         className="glass-card flex items-center gap-2 hover:bg-white/[0.06] text-slate-200 hover:text-white px-7 py-3.5 rounded-full text-sm font-semibold transition-all duration-300 w-full sm:w-auto justify-center">
 
-                        Découvrir nos Services
+                        {t('discoverServices')}
                         <ArrowRightIcon className="w-4 h-4" />
                     </a>
                 </div>
@@ -189,17 +190,17 @@ export default function HeroSection() {
                 <div className="flex flex-col sm:flex-row items-center gap-6 mt-12 opacity-0 animate-fade-in delay-1000">
                     <div className="flex items-center gap-2 text-slate-400 text-sm">
                         <CheckBadgeIcon className="w-5 h-5 text-primary-500" />
-                        <span>Médecins certifiés</span>
+                        <span>{t('certifiedDoctors')}</span>
                     </div>
                     <div className="hidden sm:block w-px h-4 bg-white/10" />
                     <div className="flex items-center gap-2 text-slate-400 text-sm">
                         <CheckBadgeIcon className="w-5 h-5 text-primary-500" />
-                        <span>Rendez-vous le jour même disponibles</span>
+                        <span>{t('sameDayAppointments')}</span>
                     </div>
                     <div className="hidden sm:block w-px h-4 bg-white/10" />
                     <div className="flex items-center gap-2 text-slate-400 text-sm">
                         <CheckBadgeIcon className="w-5 h-5 text-primary-500" />
-                        <span>Paiement Électronique Accepté</span>
+                        <span>{t('electronicPayment')}</span>
                     </div>
                 </div>
             </div>

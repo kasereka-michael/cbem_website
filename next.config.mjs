@@ -1,4 +1,7 @@
 import { imageHosts } from './image-hosts.config.mjs';
+import createNextIntlPlugin from 'next-intl/plugin';
+
+const withNextIntl = createNextIntlPlugin();
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
@@ -13,15 +16,6 @@ const nextConfig = {
     images: {
         remotePatterns: imageHosts,
         minimumCacheTTL: 60,
-    },
-    async redirects() {
-        return [
-            {
-                source: '/',
-                destination: '/homepage',
-                permanent: false,
-            },
-        ];
     },
 
     webpack(
@@ -51,4 +45,4 @@ const nextConfig = {
         return config;
     },
 };
-export default nextConfig;
+export default withNextIntl(nextConfig);
