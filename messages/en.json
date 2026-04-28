@@ -20,9 +20,39 @@
     "anotherAppointment": "Make another appointment",
     "selectService": "Select a service...",
     "services": {
-      "consultation": "Medical consultation and diagnostic services",
-      "metrologie": "Metrology and biomedical maintenance",
-      "consultance": "Consultancy and training in the biomedical field",
+      "consultation": {
+        "label": "Medical consultation and diagnostic services",
+        "options": {
+          "medecine_generale": "General medicine consultation",
+          "specialites": "Specialties consultation",
+          "imagerie": "Medical Imaging examination",
+          "laboratoire": "Laboratory examination",
+          "anatomie": "Anatomy-pathology examination",
+          "electro": "Electrodiagnostics examination (EEG, ECG, EMG)",
+          "bilan": "Complete health check-up",
+          "autre": "Other"
+        }
+      },
+      "metrologie": {
+        "label": "Metrology and biomedical maintenance",
+        "options": {
+          "verification": "Technical verification and advice",
+          "etalonnage": "Calibration and adjustment",
+          "maintenance": "Maintenance",
+          "autre": "Other"
+        }
+      },
+      "consultance": {
+        "label": "Consultancy and training in the biomedical field",
+        "options": {
+          "formation_util_equip": "Training in the use of biomedical equipment",
+          "formation_maint_equip": "Training in the maintenance of biomedical equipment",
+          "formation_psa": "Training in the use, maintenance, and management of oxygen production plants (PSA)",
+          "formation_mgmt": "Training in health technology management",
+          "accompagnement": "Technical support for biomedical projects",
+          "autre": "Other"
+        }
+      },
       "recherche": "Biomedical research and development"
     }
   },
@@ -42,7 +72,7 @@
   "HeroSection": {
     "badge": "New patients accepted · Sun-Fri: 8am – 8pm, Sat 5pm-8pm",
     "headline": "Caring Care,",
-    "excellence": "Excellence CENTRE D’EXPÉRTISE BIOMÉDICALE MAOMBI.",
+    "excellence": "Excellence Centre D'expertise Biomédicale Maombi.",
     "description": "The Maombi Biomedical Expertise Center offers you daily medical consultations, an advanced diagnostic technical platform, as well as specialized biomedical services under one roof, so that your family never waits for the care they deserve.",
     "bookAppointment": "Book an Appointment",
     "discoverServices": "Discover our Services",
@@ -71,10 +101,20 @@
     "description": "Four areas of biomedical activity gathered under one roof, with optimal coordination between services.",
     "mainActivity": "Main Activity",
     "learnMore": "Learn more",
+    "close": "Close",
     "items": {
       "consultation": {
         "title": "Medical Consultation and Diagnostic Services",
-        "description": "Comprehensive medical consultations and advanced diagnostic services including imaging, laboratory analysis, and pathology. Results available within hours for most exams."
+        "description": "Comprehensive medical consultations and advanced diagnostic services including imaging, laboratory analysis, and pathology. Results available within hours for most exams.",
+        "details": [
+          "General medicine consultation",
+          "Medical specialties consultation",
+          "Medical imaging: Digital Radiography, Digital Mammography, 3D/4D Ultrasound (Cardiac and vascular ultrasounds, Specialized ultrasounds by organ/system, Obstetrical and Pediatric Ultrasounds)",
+          "Laboratory: Hematology, Biochemistry, Bacteriology, Parasitology, Immunology, Hormonology, …",
+          "Anatomy-pathology: Morphology, Immunohistochemistry",
+          "Electrodiagnostics: Standard ECG, Stress ECG, EMG, Standard EEG, Prolonged video EEG (Telemetry)",
+          "Complete health check-up"
+        ]
       },
       "metrologie": {
         "title": "Biomedical Metrology and Maintenance",
@@ -82,7 +122,14 @@
       },
       "consultance": {
         "title": "Biomedical Consultancy and Training",
-        "description": "Expert support and specialized training programs in biomedical engineering for healthcare professionals and medical facilities."
+        "description": "Expert support and specialized training programs in biomedical engineering for healthcare professionals and medical facilities.",
+        "details": [
+          "Training in the use of biomedical equipment",
+          "Training in the maintenance of biomedical equipment",
+          "Training in the use, maintenance, and management of oxygen production plants (PSA)",
+          "Training in health technology management",
+          "Technical support for biomedical projects"
+        ]
       },
       "recherche": {
         "title": "Biomedical Research and Development",

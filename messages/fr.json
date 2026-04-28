@@ -20,9 +20,39 @@
     "anotherAppointment": "Prendre un autre rendez-vous",
     "selectService": "Sélectionner un service…",
     "services": {
-      "consultation": "Consultation médicale et services diagnostiques",
-      "metrologie": "Métrologie et maintenance biomédicale",
-      "consultance": "Consultance et formation en domaine biomédical",
+      "consultation": {
+        "label": "Consultation médicale et services diagnostiques",
+        "options": {
+          "medecine_generale": "Consultation médecine générale",
+          "specialites": "Consultation spécialités médicales",
+          "imagerie": "Examen d’Imagerie médicale",
+          "laboratoire": "Examen de laboratoire",
+          "anatomie": "Examen d’Anatomie-pathologie",
+          "electro": "Examen d’Électrodiagnostics (EEG, ECG, EMG)",
+          "bilan": "Bilan de santé complet",
+          "autre": "Autre"
+        }
+      },
+      "metrologie": {
+        "label": "Métrologie et maintenance biomédicale",
+        "options": {
+          "verification": "Vérification et avis technique",
+          "etalonnage": "Étalonnage et calibration",
+          "maintenance": "Maintenance",
+          "autre": "Autre"
+        }
+      },
+      "consultance": {
+        "label": "Consultance et formation en domaine biomédical",
+        "options": {
+          "formation_util_equip": "Formation en utilisation des équipements biomédicaux",
+          "formation_maint_equip": "Formation en maintenance des équipements biomédicaux",
+          "formation_psa": "Formation en utilisation, maintenance et management des centrales de production d’oxygène (PSA)",
+          "formation_mgmt": "Formation en management des technologies de la santé",
+          "accompagnement": "Accompagnement technique des projets biomédicaux",
+          "autre": "Autre"
+        }
+      },
       "recherche": "Recherche et développement biomédical"
     }
   },
@@ -42,8 +72,8 @@
   "HeroSection": {
     "badge": "Nouveaux patients acceptés · Dim-Ven : 8h – 20h, Sam 17h-20h",
     "headline": "Des Soins Bienveillants,",
-    "excellence": "L'Excellence CENTRE D’EXPÉRTISE BIOMÉDICALE MAOMBI.",
-    "description": "Le Centre D'expertise Biomédicale Maombi vous offre des consultations médicales jour, un plateau technique diagnostique avancé, ainsi que des services biomédicaux spécialisés sous un même toit, pour que votre famille n'attende jamais les soins qu'elle mérite.",
+    "excellence": "L'Excellence Centre D'expertise Biomédicale Maombi .",
+    "description": "Le Centre D'Expertise Biomédicale Maombi vous offre des consultations médicales jour, un plateau technique diagnostique avancé, ainsi que des services biomédicaux spécialisés sous un même toit, pour que votre famille n'attende jamais les soins qu'elle mérite.",
     "bookAppointment": "Prendre Rendez-vous",
     "discoverServices": "Découvrir nos Services",
     "certifiedDoctors": "Médecins certifiés",
@@ -71,10 +101,20 @@
     "description": "Quatre domaines d'activité biomédicale réunis sous un même toit, avec une coordination optimale entre les services.",
     "mainActivity": "Activité Principale",
     "learnMore": "En savoir plus",
+    "close": "Fermer",
     "items": {
       "consultation": {
         "title": "Consultation médicale et services diagnostiques",
-        "description": "Consultations médicales complètes et services diagnostiques avancés incluant imagerie, analyses de laboratoire et pathologie. Résultats disponibles en quelques heures pour la plupart des examens."
+        "description": "Consultations médicales complètes et services diagnostiques avancés incluant imagerie, analyses de laboratoire et pathologie. Résultats disponibles en quelques heures pour la plupart des examens.",
+        "details": [
+          "Consultation médecine générale",
+          "Consultation spécialités médicales",
+          "Imagerie médicale : Radiographie Numérique, Mammographie numérique, Échographie 3D/4D (Échographies cardiaques et vasculaires, Échographies spécialisées par organe/système, Échographies Obstétricales et Pédiatriques)",
+          "Laboratoire : Hématologie, Biochimie, Bactériologie, Parasitologie, Immunologie, Hormonologie, …",
+          "Anatomie-pathologie : Morphologie, Immuhistochimie",
+          "Électrodiagnostics : ECG standard, ECG d’effort, EMG, EEG standard, EEG vidéo prolongé (Télémétrie)",
+          "Bilan de santé complet"
+        ]
       },
       "metrologie": {
         "title": "Métrologie et maintenance biomédicale",
@@ -82,7 +122,14 @@
       },
       "consultance": {
         "title": "Consultance et formation en domaine biomédical",
-        "description": "Accompagnement expert et programmes de formation spécialisés en ingénierie biomédicale pour les professionnels de santé et les établissements médicaux."
+        "description": "Accompagnement expert et programmes de formation spécialisés en ingénierie biomédicale pour les professionnels de santé et les établissements médicaux.",
+        "details": [
+          "Formation en utilisation des équipements biomédicaux",
+          "Formation en maintenance des équipements biomédicaux",
+          "Formation en utilisation, maintenance et management des centrales de production d’oxygène (PSA)",
+          "Formation en management des technologies de la santé",
+          "Accompagnement technique des projets biomédicaux"
+        ]
       },
       "recherche": {
         "title": "Recherche et développement biomédical",
