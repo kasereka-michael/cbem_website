@@ -34,6 +34,12 @@ export default function AppointmentCTA() {
         { icon: ClockIcon, label: t('hours'), value: 'Dim-Ven : 8h – 20h, Sam 17h-20h' }
     ];
 
+    const getMinDateTime = () => {
+        const now = new Date();
+        now.setMinutes(now.getMinutes() - now.getTimezoneOffset());
+        return now.toISOString().slice(0, 16);
+    };
+
     const sectionRef = useRef<HTMLElement>(null);
     const contentRef = useRef<HTMLDivElement>(null);
 
@@ -113,7 +119,7 @@ export default function AppointmentCTA() {
             from_phone: form.phone || 'Non renseigné',
             from_email: form.email || 'Non renseigné',
 
-            service_category: serviceData.category || 'Non spécifié',
+            service_requested: serviceData.category || 'Non spécifié',
 
             // 👇 IMPORTANT: force empty string instead of undefined/null
             service_option: serviceData.option ? serviceData.option : '',
@@ -422,6 +428,7 @@ export default function AppointmentCTA() {
                                             <input
                                                 type="datetime-local"
                                                 required
+                                                min={getMinDateTime()}
                                                 value={form.date}
                                                 onChange={(e) =>
                                                     setForm({
