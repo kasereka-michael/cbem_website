@@ -355,22 +355,22 @@ export default function AppointmentCTA() {
                                                         service: e.target.value
                                                     })
                                                 }
-                                                className="bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white outline-none focus:border-primary-500"
+                                                className="bg-white/6 border border-white/10 rounded-xl px-4 py-3 text-white outline-none focus:border-primary-500"
                                             >
-                                                <option value="" className="bg-[#0a7a70] text-white">
+                                                <option value="" className="bg-[#0B1E30] text-white">
                                                     {t('selectService')}
                                                 </option>
 
                                                 {/* CONSULTATION */}
                                                 <optgroup
                                                     label={t('services.consultation.label')}
-                                                    className="bg-[#0a7a70] text-white"
+                                                    className="bg-[#0B1E30] text-white"
                                                 >
                                                     {optionKeys('consultation').map((key) => (
                                                         <option
                                                             key={key}
                                                             value={`consultation_${key}`}
-                                                            className="bg-[#0a7a70] text-white"
+                                                            className="bg-[#0B1E30] text-white"
                                                         >
                                                             {t(`services.consultation.options.${key}`)}
                                                         </option>
@@ -412,7 +412,7 @@ export default function AppointmentCTA() {
                                                 {/* RECHERCHE */}
                                                 <option
                                                     value="recherche"
-                                                    className="bg-[#0a7a70] text-white"
+                                                    className="bg-[#0B1E30] text-white"
                                                 >
                                                     {t('services.recherche')}
                                                 </option>
