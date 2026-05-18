@@ -355,25 +355,37 @@ export default function AppointmentCTA() {
                                                         service: e.target.value
                                                     })
                                                 }
-                                                className="bg-white border border-white/10 rounded-xl px-4 py-3 text-white outline-none focus:border-primary-500"
+                                                className="bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white outline-none focus:border-primary-500"
                                             >
-                                                <option value="" className="text-black">
+                                                <option value="" className="bg-[#0B1E30] text-white">
                                                     {t('selectService')}
                                                 </option>
 
-                                                <option value="consultation" className="text-black">
+                                                <option
+                                                    value="consultation"
+                                                    className="bg-[#0B1E30] text-white"
+                                                >
                                                     Consultation
                                                 </option>
 
-                                                <option value="metrologie" className="text-black">
+                                                <option
+                                                    value="metrologie"
+                                                    className="bg-[#0B1E30] text-white"
+                                                >
                                                     Métrologie
                                                 </option>
 
-                                                <option value="consultance" className="text-black">
+                                                <option
+                                                    value="consultance"
+                                                    className="bg-[#0B1E30] text-white"
+                                                >
                                                     Consultance
                                                 </option>
 
-                                                <option value="recherche" className="text-black">
+                                                <option
+                                                    value="recherche"
+                                                    className="bg-[#0B1E30] text-white"
+                                                >
                                                     Recherche
                                                 </option>
                                             </select>
