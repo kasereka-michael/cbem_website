@@ -355,25 +355,25 @@ export default function AppointmentCTA() {
                                                         service: e.target.value
                                                     })
                                                 }
-                                                className="bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white outline-none focus:border-primary-500"
+                                                className="bg-white border border-white/10 rounded-xl px-4 py-3 text-white outline-none focus:border-primary-500"
                                             >
-                                                <option value="">
+                                                <option value="" className="text-black">
                                                     {t('selectService')}
                                                 </option>
 
-                                                <option value="consultation">
+                                                <option value="consultation" className="text-black">
                                                     Consultation
                                                 </option>
 
-                                                <option value="metrologie">
+                                                <option value="metrologie" className="text-black">
                                                     Métrologie
                                                 </option>
 
-                                                <option value="consultance">
+                                                <option value="consultance" className="text-black">
                                                     Consultance
                                                 </option>
 
-                                                <option value="recherche">
+                                                <option value="recherche" className="text-black">
                                                     Recherche
                                                 </option>
                                             </select>
