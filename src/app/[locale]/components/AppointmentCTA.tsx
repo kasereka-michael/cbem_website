@@ -382,10 +382,7 @@ export default function AppointmentCTA() {
                                                     Consultance
                                                 </option>
 
-                                                <option
-                                                    value="recherche"
-                                                    className="bg-[#0B1E30] text-white"
-                                                >
+                                                <option value="recherche" className="bg-[#0B1E30] text-white">
                                                     Recherche
                                                 </option>
                                             </select>
