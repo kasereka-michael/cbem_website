@@ -361,29 +361,60 @@ export default function AppointmentCTA() {
                                                     {t('selectService')}
                                                 </option>
 
-                                                <option
-                                                    value="consultation"
+                                                {/* CONSULTATION */}
+                                                <optgroup
+                                                    label={t('services.consultation.label')}
                                                     className="bg-[#0B1E30] text-white"
                                                 >
-                                                    Consultation
-                                                </option>
+                                                    {optionKeys('consultation').map((key) => (
+                                                        <option
+                                                            key={key}
+                                                            value={`consultation_${key}`}
+                                                            className="bg-[#0B1E30] text-white"
+                                                        >
+                                                            {t(`services.consultation.options.${key}`)}
+                                                        </option>
+                                                    ))}
+                                                </optgroup>
 
-                                                <option
-                                                    value="metrologie"
+                                                {/* METROLOGIE */}
+                                                <optgroup
+                                                    label={t('services.metrologie.label')}
                                                     className="bg-[#0B1E30] text-white"
                                                 >
-                                                    Métrologie
-                                                </option>
+                                                    {optionKeys('metrologie').map((key) => (
+                                                        <option
+                                                            key={key}
+                                                            value={`metrologie_${key}`}
+                                                            className="bg-[#0B1E30] text-white"
+                                                        >
+                                                            {t(`services.metrologie.options.${key}`)}
+                                                        </option>
+                                                    ))}
+                                                </optgroup>
 
-                                                <option
-                                                    value="consultance"
+                                                {/* CONSULTANCE */}
+                                                <optgroup
+                                                    label={t('services.consultance.label')}
                                                     className="bg-[#0B1E30] text-white"
                                                 >
-                                                    Consultance
-                                                </option>
+                                                    {optionKeys('consultance').map((key) => (
+                                                        <option
+                                                            key={key}
+                                                            value={`consultance_${key}`}
+                                                            className="bg-[#0B1E30] text-white"
+                                                        >
+                                                            {t(`services.consultance.options.${key}`)}
+                                                        </option>
+                                                    ))}
+                                                </optgroup>
 
-                                                <option value="recherche" className="bg-[#0B1E30] text-white">
-                                                    Recherche
+                                                {/* RECHERCHE */}
+                                                <option
+                                                    value="recherche"
+                                                    className="bg-[#0B1E30] text-white"
+                                                >
+                                                    {t('services.recherche')}
                                                 </option>
                                             </select>
 
