@@ -355,7 +355,7 @@ export default function AppointmentCTA() {
                                                         service: e.target.value
                                                     })
                                                 }
-                                                className="bg-white/3 border border-white/10 rounded-xl px-4 py-3 text-white outline-none focus:border-primary-500"
+                                                className="bg-black/3 border border-white/10 rounded-xl px-4 py-3 text-white outline-none focus:border-primary-500"
                                             >
                                                 <option value="" className="bg-[#0B1E30] text-white">
                                                     {t('selectService')}
