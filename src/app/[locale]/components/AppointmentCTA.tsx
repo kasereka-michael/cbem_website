@@ -21,8 +21,8 @@ export default function AppointmentCTA() {
 
     const [form, setForm] = useState({
         name: '',
-        phone: '',
         email:'',
+        phone: '',
         service: '',
         date: ''
     });
