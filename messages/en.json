@@ -14,9 +14,9 @@
     "service": "Desired Service",
     "date": "Preferred Date",
     "confirmButton": "Confirm Appointment Request",
-    "noPayment": "No payment required. Our team will confirm availability within 30 minutes.",
+    "noPayment": "No payment is required. Our team will contact you as soon as possible.",
     "submittedTitle": "Appointment Requested!",
-    "submittedDesc": "Our care coordinator will call you within 30 minutes to confirm your appointment time.",
+    "submittedDesc": "Our care coordinator will contact you shortly to confirm your appointment time.",
     "anotherAppointment": "Make another appointment",
     "selectService": "Select a service...",
     "services": {

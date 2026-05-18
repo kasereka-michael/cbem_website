@@ -14,9 +14,10 @@
     "service": "Service Souhaité",
     "date": "Date Préférée",
     "confirmButton": "Confirmer la Demande de Rendez-vous",
-    "noPayment": "Aucun paiement requis. Notre équipe confirmera la disponibilité dans les 30 minutes.",
+    "noPayment": "Aucun paiement n’est requis. Notre équipe vous contactera dès que possible."
+  ,
     "submittedTitle": "Rendez-vous Demandé !",
-    "submittedDesc": "Notre coordinateur de soins vous appellera dans les 30 minutes pour confirmer votre heure de rendez-vous.",
+    "submittedDesc": "Notre coordonnateur des soins vous contactera incessamment pour confirmer votre heure de rendez-vous",
     "anotherAppointment": "Prendre un autre rendez-vous",
     "selectService": "Sélectionner un service…",
     "services": {

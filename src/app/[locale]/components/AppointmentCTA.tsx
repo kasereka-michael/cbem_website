@@ -22,6 +22,7 @@ export default function AppointmentCTA() {
     const [form, setForm] = useState({
         name: '',
         phone: '',
+        email:'',
         service: '',
         date: ''
     });
@@ -110,6 +111,7 @@ export default function AppointmentCTA() {
 
             from_name: form.name || 'Non renseigné',
             from_phone: form.phone || 'Non renseigné',
+            from_email: form.email || 'Non renseigné',
 
             service_category: serviceData.category || 'Non spécifié',
 
@@ -141,18 +143,28 @@ export default function AppointmentCTA() {
     };
 
     return (
-        <section id="contact" ref={sectionRef} className="py-16 md:py-20 relative overflow-hidden">
+        <section
+            id="contact"
+            ref={sectionRef}
+            className="py-16 md:py-20 relative overflow-hidden"
+        >
 
             {/* Background */}
-            <div className="absolute inset-0" style={{
-                background: 'linear-gradient(135deg, #0A1220 0%, #0B1E30 50%, #081828 100%)'
-            }} />
+            <div
+                className="absolute inset-0"
+                style={{
+                    background:
+                        'linear-gradient(135deg, #0A1220 0%, #0B1E30 50%, #081828 100%)'
+                }}
+            />
 
-            <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[500px] h-[300px] pointer-events-none"
-                 style={{
-                     background: 'radial-gradient(ellipse, rgba(13,148,136,0.12) 0%, transparent 70%)',
-                     filter: 'blur(60px)'
-                 }}
+            <div
+                className="absolute top-0 left-1/2 -translate-x-1/2 w-[500px] h-[300px] pointer-events-none"
+                style={{
+                    background:
+                        'radial-gradient(ellipse, rgba(13,148,136,0.12) 0%, transparent 70%)',
+                    filter: 'blur(60px)'
+                }}
             />
 
             <div className="absolute inset-0 border-t border-b border-white/5" />
@@ -167,33 +179,51 @@ export default function AppointmentCTA() {
                         <div className="w-full lg:w-5/12 flex flex-col gap-10">
 
                             <div>
-                                <span className="text-primary-500 text-xs font-semibold uppercase tracking-widest mb-4 block">
-                                    {t('contactUs')}
-                                </span>
+
+                            <span className="text-primary-500 text-xs font-semibold uppercase tracking-widest mb-4 block">
+                                {t('contactUs')}
+                            </span>
 
                                 <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-white">
                                     {t('headline')}
                                     <br />
-                                    <span className="text-primary-400">{t('subheadline')}</span>
+                                    <span className="text-primary-400">
+                                    {t('subheadline')}
+                                </span>
                                 </h2>
 
                                 <p className="text-slate-400 mt-4 text-sm md:text-base">
                                     {t('description')}
                                 </p>
+
                             </div>
 
+                            {/* CONTACT INFO */}
                             <div className="flex flex-col gap-4">
+
                                 {contactInfo.map((item) => (
-                                    <div key={item.label} className="flex items-center gap-4">
+                                    <div
+                                        key={item.label}
+                                        className="flex items-center gap-4"
+                                    >
+
                                         <div className="w-10 h-10 rounded-xl glass-card flex items-center justify-center">
                                             <item.icon className="w-5 h-5 text-primary-400" />
                                         </div>
+
                                         <div>
-                                            <p className="text-slate-500 text-xs uppercase">{item.label}</p>
-                                            <p className="text-white text-sm">{item.value}</p>
+                                            <p className="text-slate-500 text-xs uppercase">
+                                                {item.label}
+                                            </p>
+
+                                            <p className="text-white text-sm">
+                                                {item.value}
+                                            </p>
                                         </div>
+
                                     </div>
                                 ))}
+
                             </div>
 
                         </div>
@@ -204,11 +234,15 @@ export default function AppointmentCTA() {
                             <div className="glass-card rounded-3xl p-6 md:p-8">
 
                                 {submitted ? (
+
                                     <div className="text-center py-12 flex flex-col items-center gap-4">
+
                                         <CheckCircleIcon className="w-14 h-14 text-primary-500" />
+
                                         <h3 className="text-2xl font-semibold text-white">
                                             {t('submittedTitle')}
                                         </h3>
+
                                         <p className="text-slate-400 text-sm">
                                             {t('submittedDesc')}
                                         </p>
@@ -216,56 +250,132 @@ export default function AppointmentCTA() {
                                         <button
                                             onClick={() => {
                                                 setSubmitted(false);
-                                                setForm({ name: '', phone: '', service: '', date: '' });
+
+                                                setForm({
+                                                    name: '',
+                                                    email: '',
+                                                    phone: '',
+                                                    service: '',
+                                                    date: ''
+                                                });
+
+                                                setError('');
                                             }}
                                             className="text-primary-400 text-sm font-semibold"
                                         >
                                             {t('anotherAppointment')}
                                         </button>
+
                                     </div>
+
                                 ) : (
+
                                     <>
                                         <h3 className="text-xl font-semibold text-white mb-6">
                                             {t('requestAppointment')}
                                         </h3>
 
-                                        <form onSubmit={handleSubmit} className="flex flex-col gap-4">
+                                        <form
+                                            onSubmit={(e) => {
+                                                e.preventDefault();
 
-                                            {/* NAME + PHONE SAME ROW */}
+                                                setError('');
+
+                                                const emailRegex =
+                                                    /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+                                                if (!emailRegex.test(form.email)) {
+                                                    setError(
+                                                        'Please enter a valid email address'
+                                                    );
+                                                    return;
+                                                }
+
+                                                handleSubmit(e);
+                                            }}
+                                            className="flex flex-col gap-4"
+                                        >
+
+                                            {/* NAME + EMAIL */}
                                             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
 
                                                 <input
                                                     type="text"
                                                     required
                                                     value={form.name}
-                                                    onChange={(e) => setForm({ ...form, name: e.target.value })}
+                                                    onChange={(e) =>
+                                                        setForm({
+                                                            ...form,
+                                                            name: e.target.value
+                                                        })
+                                                    }
                                                     placeholder={t('fullName')}
-                                                    className="bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white"
+                                                    className="bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white placeholder:text-slate-500 outline-none focus:border-primary-500"
                                                 />
 
                                                 <input
-                                                    type="tel"
+                                                    type="email"
                                                     required
-                                                    value={form.phone}
-                                                    onChange={(e) => setForm({ ...form, phone: e.target.value })}
-                                                    placeholder={t('phone')}
-                                                    className="bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white"
+                                                    value={form.email}
+                                                    onChange={(e) =>
+                                                        setForm({
+                                                            ...form,
+                                                            email: e.target.value
+                                                        })
+                                                    }
+                                                    placeholder={t('email')}
+                                                    pattern="^[^\s@]+@[^\s@]+\.[^\s@]+$"
+                                                    className="bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white placeholder:text-slate-500 outline-none focus:border-primary-500"
                                                 />
 
                                             </div>
+
+                                            {/* PHONE */}
+                                            <input
+                                                type="tel"
+                                                required
+                                                value={form.phone}
+                                                onChange={(e) =>
+                                                    setForm({
+                                                        ...form,
+                                                        phone: e.target.value
+                                                    })
+                                                }
+                                                placeholder={t('phone')}
+                                                className="bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white placeholder:text-slate-500 outline-none focus:border-primary-500"
+                                            />
 
                                             {/* SERVICE */}
                                             <select
                                                 required
                                                 value={form.service}
-                                                onChange={(e) => setForm({ ...form, service: e.target.value })}
-                                                className="bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white"
+                                                onChange={(e) =>
+                                                    setForm({
+                                                        ...form,
+                                                        service: e.target.value
+                                                    })
+                                                }
+                                                className="bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white outline-none focus:border-primary-500"
                                             >
-                                                <option value="">{t('selectService')}</option>
-                                                <option value="consultation">Consultation</option>
-                                                <option value="metrologie">Métrologie</option>
-                                                <option value="consultance">Consultance</option>
-                                                <option value="recherche">Recherche</option>
+                                                <option value="">
+                                                    {t('selectService')}
+                                                </option>
+
+                                                <option value="consultation">
+                                                    Consultation
+                                                </option>
+
+                                                <option value="metrologie">
+                                                    Métrologie
+                                                </option>
+
+                                                <option value="consultance">
+                                                    Consultance
+                                                </option>
+
+                                                <option value="recherche">
+                                                    Recherche
+                                                </option>
                                             </select>
 
                                             {/* DATE */}
@@ -273,21 +383,35 @@ export default function AppointmentCTA() {
                                                 type="datetime-local"
                                                 required
                                                 value={form.date}
-                                                onChange={(e) => setForm({ ...form, date: e.target.value })}
-                                                className="bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white"
+                                                onChange={(e) =>
+                                                    setForm({
+                                                        ...form,
+                                                        date: e.target.value
+                                                    })
+                                                }
+                                                className="bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white outline-none focus:border-primary-500"
                                             />
 
+                                            {/* ERROR */}
                                             {error && (
-                                                <p className="text-red-400 text-sm">{error}</p>
+                                                <p className="text-red-400 text-sm">
+                                                    {error}
+                                                </p>
                                             )}
 
+                                            {/* BUTTON */}
                                             <button
                                                 type="submit"
                                                 disabled={loading}
-                                                className="bg-primary-600 text-white py-3 rounded-xl font-semibold flex items-center justify-center gap-2"
+                                                className="bg-primary-600 hover:bg-primary-500 transition-all duration-300 text-white py-3 rounded-xl font-semibold flex items-center justify-center gap-2 disabled:opacity-50"
                                             >
+
                                                 <CalendarDaysIcon className="w-4 h-4" />
-                                                {loading ? 'Envoi...' : t('confirmButton')}
+
+                                                {loading
+                                                    ? 'Envoi...'
+                                                    : t('confirmButton')}
+
                                             </button>
 
                                         </form>
