@@ -74,7 +74,7 @@
     "badge": "Nouveaux patients acceptés · Dim-Ven : 8h – 20h, Sam 17h-20h",
     "headline": "Des Soins Bienveillants,",
     "excellence": "L'Excellence Centre d'Expertise Biomédicale Maombi .",
-    "description": "Le Centre D'Expertise Biomédicale Maombi vous offre des consultations médicales jour, un plateau technique diagnostique avancé, ainsi que des services biomédicaux spécialisés sous un même toit, pour que votre famille n'attende jamais les soins qu'elle mérite.",
+    "description": "Le Centre d'Expertise Biomédicale Maombi vous offre des consultations médicales jour, un plateau technique diagnostique avancé, ainsi que des services biomédicaux spécialisés sous un même toit, pour que votre famille n'attende jamais les soins qu'elle mérite.",
     "bookAppointment": "Prendre Rendez-vous",
     "discoverServices": "Découvrir nos Services",
     "certifiedDoctors": "Médecins certifiés",
@@ -140,7 +140,7 @@
   },
   "AboutSection": {
     "badge": "Notre Vision",
-    "description": "Devenir un pôle d'excellence technologique et humaine, offrant des diagnostics ultraprécis pour dépister précocement les pathologies complexes, optimiser les stratégies thérapeutiques et personnaliser les soins du patient, le tout dans un environnement humain et accessible.",
+    "description": "Devenir un pôle d'Excellence technologique et humaine, offrant des diagnostics ultraprécis pour dépister précocement les pathologies complexes, optimiser les stratégies thérapeutiques et personnaliser les soins du patient, le tout dans un environnement humain et accessible.",
     "idTitle": "Identification nationale",
     "pillars": {
       "evidence": {
@@ -158,7 +158,7 @@
     "headline": "Des personnes réelles, des résultats concrets.",
     "items": {
       "lucy": {
-        "quote": "J'amène toute ma famille à Centre D'expertise Biomedicale Maombi depuis trois ans. Les pédiatres sont patients et minutieux — mes enfants attendent maintenant les consultations avec impatience.",
+        "quote": "J'amène toute ma famille à Centre d'Expertise Biomedicale Maombi depuis trois ans. Les pédiatres sont patients et minutieux — mes enfants attendent maintenant les consultations avec impatience.",
         "role": "Mère de trois enfants, Goma"
       },
       "jacques": {
@@ -174,7 +174,7 @@
   "Footer": {
     "tagline1": "Prendre soin de votre santé",
     "tagline2": "à chaque étape.",
-    "copyright": "© {year} Centre D'expertise Biomedicale Maombi. Tous droits réservés.",
+    "copyright": "© {year} Centre d'Expertise Biomedicale Maombi. Tous droits réservés.",
     "privacy": "Confidentialité",
     "terms": "Conditions"
   }

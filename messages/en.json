@@ -73,7 +73,7 @@
     "badge": "New patients accepted · Sun-Fri: 8am – 8pm, Sat 5pm-8pm",
     "headline": "Caring Care,",
     "excellence": "Excellence Centre d'Expertise Biomédicale Maombi.",
-    "description": "The Maombi Biomedical Expertise Center offers you daily medical consultations, an advanced diagnostic technical platform, as well as specialized biomedical services under one roof, so that your family never waits for the care they deserve.",
+    "description": "The Centre d'Expertise Biomédicale Maombi offers you daily medical consultations, an advanced diagnostic technical platform, as well as specialized biomedical services under one roof, so that your family never waits for the care they deserve.",
     "bookAppointment": "Book an Appointment",
     "discoverServices": "Discover our Services",
     "certifiedDoctors": "Certified doctors",
@@ -157,7 +157,7 @@
     "headline": "Real people, real results.",
     "items": {
       "lucy": {
-        "quote": "I have been bringing my whole family to Maombi Biomedical Expertise Center for three years. The pediatricians are patient and thorough — my children now look forward to their consultations.",
+        "quote": "I have been bringing my whole family to the Centre d'Expertise Biomédicale Maombi for three years. The pediatricians are patient and thorough — my children now look forward to their consultations.",
         "role": "Mother of three children, Goma"
       },
       "jacques": {
@@ -173,7 +173,7 @@
   "Footer": {
     "tagline1": "Taking care of your health",
     "tagline2": "every step of the way.",
-    "copyright": "© {year} Maombi Biomedical Expertise Center. All rights reserved.",
+    "copyright": "© {year} Centre d'Expertise Biomédicale Maombi. All rights reserved.",
     "privacy": "Privacy",
     "terms": "Terms"
   }
