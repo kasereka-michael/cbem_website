@@ -329,7 +329,7 @@ export default function AppointmentCTA() {
                                                             email: e.target.value
                                                         })
                                                     }
-                                                    placeholder={t('email')}
+                                                    placeholder='email'
                                                     pattern="^[^\s@]+@[^\s@]+\.[^\s@]+$"
                                                     className="bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white placeholder:text-slate-500 outline-none focus:border-primary-500"
                                                 />
